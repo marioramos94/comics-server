@@ -41,7 +41,7 @@ app.get("/random", async (req, res) => {
   res.send(parse(comicSaved));
 });
 
-app.get("/", async (req, res) => {
+app.get("*", async (req, res) => {
   res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
